@@ -1,0 +1,3 @@
+package,version,purpose
+Python standard library,3.10+,Runtime modules; included with Python
+pip,environment-dependent,Package installer; no runtime dependency

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Local synthetic campus IT helpdesk request form">
+  <title>Campus IT Helpdesk</title><link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav aria-label="Main navigation"><a class="brand" href="#main">Campus IT Helpdesk</a><a href="#form">Submit a request</a></nav></header>
+  <main id="main" class="layout">
+    <section class="form-card" aria-labelledby="page-title">
+      <p class="eyebrow">LOCAL DEMO · NO DATA IS SENT</p><h1 id="page-title">How can we help?</h1>
+      <p>Describe a technical issue and review your confirmation on this page.</p>
+      <form id="request-form" novalidate>
+        <label for="category">Category</label>
+        <select id="category" name="category" required><option value="">Choose a category</option><option>Accounts</option><option>Network</option><option>Hardware</option><option>Software</option><option>Other</option></select>
+        <label for="title">Short title</label><input id="title" name="title" type="text" required minlength="5" maxlength="80" aria-describedby="title-help"><small id="title-help">5 to 80 characters.</small>
+        <label for="description">Description</label><textarea id="description" name="description" rows="5" required minlength="10" maxlength="1000" aria-describedby="description-help"></textarea><small id="description-help">10 to 1,000 characters. Do not include passwords.</small>
+        <label for="urgency">Urgency</label><select id="urgency" name="urgency" required><option>Normal</option><option>High</option><option>Low</option></select>
+        <label for="contact">Preferred contact method</label><select id="contact" name="contact" required><option>Email</option><option>Phone</option><option>In person</option></select>
+        <button type="submit">Review request</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <aside class="summary" aria-labelledby="summary-title"><h2 id="summary-title">Request summary</h2><p id="summary-empty">Your confirmation will appear here after validation.</p><dl id="summary-details" hidden></dl></aside>
+  </main>
+  <footer>Prototype only. Use fictional details; requests stay in this browser page.</footer>
+</body></html>
